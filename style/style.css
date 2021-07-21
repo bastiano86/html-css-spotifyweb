@@ -3,10 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+main {
+  content:"";
+  display: table;
+  clear: both;
+}
 body {
   background-color: black;
   font-family: 'Poppins', sans-serif;
 }
+/* navigation */
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -17,6 +24,7 @@ body {
   display: inline-block;
 }
 .logo h2{
+  padding-left: 20px;
   width: 100px;
   color: white;
   display: inline-block;
@@ -27,38 +35,34 @@ body {
 h2:hover, h3:hover, li:hover {
   color: white;
 }
-
 nav {
   padding-top: 10px;
-  padding-left: 20px;
   display: flex;
   flex-direction: column;
   background-color:rgba(255, 255, 255, 0.1);
   border-right: 1px solid red;
   width: 200px;
-  height: 100vh;
+  height: calc(100vh - 60px);
 }
-
 nav h2 {
   vertical-align: middle;
   color: grey;
   font-weight: 200;
   font-size: 0.9em;
 }
-
 nav h3 {
+  padding-left: 20px;
   letter-spacing: 0.1em;
   font-size: 1em;
   color:white;
   margin-bottom: 7px;
 }
-
 nav>h2>i {
+  padding-left: 20px;
   font-size: 2em;
   vertical-align: middle;
   margin-right: 15px;
 }
-
 .navigation-menu {
   margin-bottom: 20px;
   margin-top: 10px;
@@ -69,11 +73,15 @@ nav>h2>i {
   display: flex;
   flex-direction: column;
 }
-
 .navigation-menu i {
+  padding-left: 20px;
   font-size: 1.5em;
   margin-right: 5px;
   vertical-align:middle;
+}
+.navigation-menu li:hover {
+  border-left: 3px solid green;
+  margin-left: 0;
 }
 .playlist-menu {
   width: 100%;
@@ -84,13 +92,31 @@ nav>h2>i {
   color: #4d4d4d;
 }
 .playlist-menu li {
-  width: 120px;
+  padding-left: 20px;
+  width: 100%;
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
-
 .playlist-menu li:hover {
-  border-left: 2px solid green;
-  padding-left: 10px;
+  border-left: 3px solid green;
+  padding-left: calc(20px - 3px);
+}
+/* main container */
+.main-container {
+  width: calc(100vw - 200px);
+  height: calc(100vh - 80px);
+  background-color: green;
+  display: inline-block;
+  float: left;
+}
+
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: pink;
+  z-index: 2;
 }
