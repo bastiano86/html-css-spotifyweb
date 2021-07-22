@@ -1,0 +1,84 @@
+/* media query for mobile devices*/
+@media screen and (max-width: 480px){
+* {
+  }
+.logo .logo-title {
+  display: none;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+nav {
+  width: 50px;
+  overflow: hidden;
+}
+nav p {
+    display: none;
+}
+.playlist-menu li {
+    display: none;
+  }
+
+nav h2,
+nav h3 {
+  display: none;
+}
+
+.nav-lower {
+  display: none;
+}
+.music-menu {
+  display: none;
+}
+.album-container{
+  height: 100%;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+
+.button-container {
+  display:none
+}
+.main-container {
+    width: calc(100% - 50px);
+    height: calc(100vh - 60px);
+    background-color: black;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+
+.single-album {
+  flex-basis: 28%;
+  margin-right: 2%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.single-album-artwork {
+  height: 55%;
+}
+
+.single-album-artwork i {
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  display: none;
+}
+
+.footer-player-a {
+  display: none;
+}
+
+.footer-player-c {
+  display: none;
+}
+}
