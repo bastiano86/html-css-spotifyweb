@@ -24,24 +24,25 @@ body {
   flex-direction: row;
 }
 .logo img{
+  margin-left: 20px;
   vertical-align: text-bottom;
-  width: 40px;
+  width: 50px;
   display: inline-block;
 }
 .logo h2{
-  padding-left: 20px;
+  margin-left: 3px;
   width: 100px;
   color: white;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 500;
 }
-h2:hover, h3:hover, li:hover {
+h3:hover, li:hover {
   color: white;
 }
 nav {
   padding-top: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: black;
   width: 200px;
   height: calc(100vh - 60px);
   float: left;
@@ -81,8 +82,9 @@ nav>h2>i {
   margin-right: 5px;
   vertical-align:middle;
 }
+
 .navigation-menu>li:hover {
-  border-left: 3px solid green;
+  border-left: 3px solid #ADFF2F;
   margin-left: 0;
 }
 .playlist-menu {
@@ -101,7 +103,7 @@ nav>h2>i {
   text-overflow: ellipsis;
 }
 .playlist-menu li:hover {
-  border-left: 3px solid green;
+  border-left: 3px solid #ADFF2F;
   padding-left: calc(20px - 3px);
 }
 
@@ -128,9 +130,9 @@ nav>h2>i {
   display: flex;
   justify-content: flex-end;
   padding: 20px;
+  height: 70px;
 }
 .music-menu {
-  height: 30px;
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -149,7 +151,7 @@ nav>h2>i {
   margin: 7px 20px;
   padding-bottom: 5px;
   color: white;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #ADFF2F;
 }
 
 /* album */
@@ -168,11 +170,11 @@ nav>h2>i {
   margin: 7px 20px;
   padding-bottom: ;
   color: white;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #ADFF2F;
 }
 .album-container {
+  height: calc(100% - 70px);
   width: 100%;
-  height: 100%;
   background-color: #000C1E;
   overflow-y  : scroll;
   z-index: 1;
@@ -191,13 +193,30 @@ nav>h2>i {
 }
 .single-album {
   margin-right: 50px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .single-album img {
+  position: relative;
+}
+.single-album img,
+.single-album h2,
+.single-album h3{
   width: 200px;
 }
+.single-album img:hover {
+  filter: brightness(50%);
+}
+
+
+.single-album i:hover {
+  position: absolute;
+  font-size: 4em;
+  color: white;
+}
+
 .single-album h2 {
   text-align: center;
   margin-top: 10px;
@@ -219,10 +238,148 @@ nav>h2>i {
 }
 
 
-/* footer */
+/* footer1 */
+.footer-player-a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-player-a img {
+  margin: 0 10px;
+  width: 50px;
+}
+.footer-player-a i {
+  font-size: 1em;
+  color: gray;
+  margin-left: 10px;
+}
+.title {
+  font-size: 0.8em;
+  font-weight: 600;
+  display: block;
+  transition: 0.3s;
+}
+.title:hover {
+  color: white;
+}
+.subtitle {
+  font-size: 0.7em;
+  display: block;
+  transition: 0.3s;
+}
+.subtitle:hover {
+  color: white;
+}
+.info-player {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  line-height: 14px;
+  margin-right: 40px;
+}
+/* footer2 */
+.footer-player-b {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+}
+.top-navigation {
+  flex-basis: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.top-navigation i {
+  font-size: 1em;
+  color: white;
+  margin: 0 20px;
+  color: gray;
+}
+
+.footer-player-b .play {
+  font-size: 1.5em;
+}
+.footer-player-b .forward{
+  transform: rotatey(180deg);
+}
+.bottom-navigation{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-num p {
+  font-size: 0.6em;
+  color: white;
+  font-weight: 500;
+}
+.central-bar-gray {
+  width: 50%;
+  margin: 0 20px;
+  height: 4px;
+  background-color: gray;
+  border-radius: 2px;
+  display: relative;
+}
+.central-bar-green {
+  width: 10%;
+  height: 4px;
+  background-color: #ADFF2F;
+  border-radius: 2px;
+  position: absolute;
+
+}
+
+.ballpoint{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: 0;
+  top:-1px;
+  margin-bottom: 8px;
+  border-radius: 2.5px;
+  background-color: white;
+}
+/* footer-player-c */
+
+.footer-player-c {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-player-c i {
+  font-size: 0.8em;
+  color: gray;
+  margin-left: 10px;
+}
+.side-bar-gray {
+  width: 100px;
+  margin: 0 20px;
+  height: 4px;
+  background-color: gray;
+  border-radius: 2px;
+  display: relative;
+}
+.side-bar-green {
+  width: 25px;
+  height: 4px;
+  background-color: #ADFF2F;
+  border-radius: 2px;
+  position: absolute;
+}
 footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   z-index: 2;
   width: 100%;
   height:60px;
-  background-color: pink;
+  background-color: black;
 }
