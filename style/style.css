@@ -192,7 +192,7 @@ nav>h2>i {
   flex-direction: row;
 }
 .single-album {
-  flex-basis: 16%;  
+  flex-basis: 16%;
   margin-right: 50px;
   margin-bottom: 10px;
   display: flex;
