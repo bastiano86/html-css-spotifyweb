@@ -192,6 +192,7 @@ nav>h2>i {
   flex-direction: row;
 }
 .single-album {
+  flex-basis: 16%;  
   margin-right: 50px;
   margin-bottom: 10px;
   display: flex;
@@ -211,17 +212,18 @@ nav>h2>i {
   filter: brightness(50%);
 }
 
-.single-album-artwork i {
+.single-album-artwork:hover i {
   display: block;
 }
 
-.single-album-artwork:hover i {
+.single-album-artwork i {
   transform: translate(-50%,-50%);
   top:50%;
   left:50%;
   position: absolute;
   font-size: 4em;
   color: white;
+  display: none;
 }
 
 .single-album h2 {
