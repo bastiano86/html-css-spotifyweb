@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  max-width: 100%;
+}
 .clearfix::after {
   content:"";
   display: table;
@@ -44,8 +47,9 @@ nav {
   padding-top: 10px;
   background-color: black;
   width: 200px;
-  height: calc(100vh - 60px);
+  height: calc(100% - 60px);
   float: left;
+  overflow-y: scroll;
 }
 nav h2 {
   vertical-align: middle;
@@ -132,12 +136,14 @@ nav>h2>i {
   padding: 20px;
   height: 70px;
 }
+
+
 .music-menu {
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: center;
-  overflow: hidden;
+  overflow-: hidden;
 }
 .music-menu li {
   margin: 7px 20px;
@@ -147,11 +153,18 @@ nav>h2>i {
   font-weight: 600;
   font-stretch: extra-expanded;
 }
+.music-menu li .underscore {
+  margin: 0 auto;
+  width: 50px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+.music-menu li:active .underscore {
+  background-color:#ADFF2F;
+}
 .music-menu li:hover {
-  margin: 7px 20px;
-  padding-bottom: 5px;
   color: white;
-  border-bottom: 2px solid #ADFF2F;
 }
 
 /* album */
@@ -166,12 +179,7 @@ nav>h2>i {
   font-weight: 600;
   font-stretch: extra-expanded;
 }
-.music-menu li:hover {
-  margin: 7px 20px;
-  padding-bottom: ;
-  color: white;
-  border-bottom: 2px solid #ADFF2F;
-}
+
 .album-container {
   height: calc(100% - 70px);
   width: 100%;
@@ -179,11 +187,20 @@ nav>h2>i {
   overflow-y  : scroll;
   z-index: 1;
 }
+
+.album-container-title {
+  margin: 40px
+}
 .album-container-title h1{
   font-size: 2em;
   color: white;
   font-weight: 600;
-  margin: 40px;
+}
+
+.album-container-title h2{
+  font-size: 0.8em;
+  color: gray;
+  font-weight: 300;
 }
 .album-collection {
   margin-left: 40px;
@@ -192,14 +209,17 @@ nav>h2>i {
   flex-direction: row;
 }
 .single-album {
-  flex-basis: 16%;
-  margin-right: 50px;
+  flex-basis: 20%;
+  margin-right: 2%;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-color: red;
+}
+
+.single-album:nth-child(6n) {
+  margin-right: 0
 }
 
 .single-album-artwork {
@@ -249,14 +269,16 @@ nav>h2>i {
 
 /* footer1 */
 .footer-player-a {
+
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
 .footer-player-a img {
+
+  height: 40px;
   margin: 0 10px;
-  width: 50px;
 }
 .footer-player-a i {
   font-size: 1em;
